@@ -13,7 +13,7 @@
 .form {
   display: grid;
   justify-items: center;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto minmax(0,1fr) auto auto;
   gap: 1rem;
   background: var(--gray-3);
   border: 1px solid var(--gray-5);
@@ -68,13 +68,14 @@
 
 .image {
   align-self: center;
-  max-width: 90%;
+  height: 100%;
+  width: auto;
   position: relative;
 }
 
 .image img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .image span {
