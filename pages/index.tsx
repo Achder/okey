@@ -79,7 +79,7 @@ const Home: NextPage<Props> = (props) => {
 
         <div className={styles.form}>
 
-          <h1>Key trade</h1>
+          <h1>okey trade</h1>
           
           <div className={styles.image}>
             <Image src={keyImg} alt="Picture of the key" />

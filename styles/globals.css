@@ -7,3 +7,7 @@ html, body, h1 {
 * {
   box-sizing: inherit;
 }
+
+html {
+  font-size: 18px;
+}
