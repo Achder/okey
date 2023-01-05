@@ -99,7 +99,7 @@ const Home: NextPage<Props> = (props) => {
           <footer>
             {
               success 
-                ? <span>Updated!</span>
+                ? <p>Updated!</p>
                 : (
                   <button 
                     type='button' 
