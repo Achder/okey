@@ -5,21 +5,18 @@
   font-family: 'Open Sans', sans-serif;
   background: var(--gray-1);
   color: var(--gray-7);
-  height: 100vh;
+  height: 100svh;
   display: grid;
-  place-content: center;
+  padding: 2rem;
 }
 
 .form {
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  grid-template-rows: auto 1fr auto auto;
   gap: 1rem;
   background: var(--gray-3);
   border: 1px solid var(--gray-5);
-  box-shadow: var(--shadow-3);
 }
 
 .main h1 {
@@ -70,7 +67,8 @@
 }
 
 .image {
-  width: 100px;
+  align-self: center;
+  max-width: 90%;
   position: relative;
 }
 
