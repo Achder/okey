@@ -69,7 +69,7 @@ const Home: NextPage<Props> = (props) => {
     <>
       <Head>
         <title>oka key tracker</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -77,16 +77,17 @@ const Home: NextPage<Props> = (props) => {
 
         <Toaster position='top-center'/>
 
-        <div className={styles.form}>
-
-          <h1>okey trade</h1>
+        <h1>key trade</h1>
           
+        <div className={styles.container}>
+
           <div className={styles.image}>
             <Image src={keyImg} alt="Picture of the key" />
             <span>{keyNumber}</span>
           </div>
 
-          <fieldset>
+          <fieldset style={{opacity: success ? 0 : 1}}>
+            <label>Who are you?</label>
             <input 
               type='text' 
               value={who} 
@@ -96,23 +97,22 @@ const Home: NextPage<Props> = (props) => {
             />
           </fieldset>
 
-          <footer>
-            {
-              success 
-                ? <p>Updated!</p>
-                : (
-                  <button 
-                    type='button' 
-                    disabled={loading || success || who === '' || keyNumber === ''}
-                    onClick={onSend}
-                  >
-                    Take it
-                  </button>
-                )
-            }
-          </footer>
+          {
+            success 
+              ? <p>Updated!</p>
+              : (
+                <button 
+                  type='button' 
+                  disabled={loading || success || who === '' || keyNumber === ''}
+                  onClick={onSend}
+                >
+                  Take it
+                </button>
+              )
+          }
 
         </div>
+
       </main>
     </>
   )
