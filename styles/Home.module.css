@@ -15,7 +15,6 @@
   grid-template-rows: auto minmax(0,1fr) auto auto;
   gap: 1rem;
   background: var(--cyan-2);
-  border: 1px solid var(--gray-5);
   overflow: hidden;
 }
 
@@ -37,6 +36,8 @@
   grid-auto-flow: column;
   justify-items: center;
   z-index: 100;
+  padding: 1rem;
+  padding-top: 0;
 }
 
 .main footer p {
@@ -57,7 +58,7 @@
   justify-items: start;
   gap: 0.5rem;
   margin: 0;
-  padding-inline: 1rem;
+  padding: 0 1rem;
   z-index: 100;
 }
 
@@ -71,11 +72,13 @@
 .main button {
   width: 100%;
   font: inherit;
-  background: var(--gray-7);
+  background: var(--teal-5);
   border: 0;
-  color: var(--gray-0);
+  color: var(--gray-1);
   padding: 2rem 1rem;
   margin: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .main button:disabled {
@@ -92,7 +95,7 @@
 .image img {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 20px);
   width: auto;
   height: 200%;
   filter: drop-shadow(0 0 20px var(--pink-5))
