@@ -1,131 +1,131 @@
 @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
 }
 
 .main {
-  height: 100svh;
-  display: grid;
-  grid-template-rows: auto minmax(0,1fr);
-  overflow: hidden;
+	height: 100svh;
+	display: grid;
+	grid-template-rows: auto minmax(0, 1fr);
+	overflow: hidden;
 }
 
 .main h1 {
-  background: var(--pink-6);
-  color: var(--gray-1);
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 3rem;
-  text-align: center;
-  letter-spacing: 0.4rem;
-  white-space: nowrap;
-  overflow: hidden;
+	background: var(--pink-6);
+	color: var(--gray-1);
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 3rem;
+	text-align: center;
+	letter-spacing: 0.4rem;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(0, 1fr) auto auto;
-  gap: 1rem;
-  padding: 1rem;
-  border: 5px solid var(--pink-6);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(0, 1fr) auto auto;
+	gap: 1rem;
+	padding: 1rem;
+	border: 5px solid var(--pink-6);
 }
 
 .image {
-  position: relative;
-  grid-row: 1 / -1;
+	position: relative;
+	grid-row: 1 / -1;
 }
 
 .image img {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 20px);
-  width: auto;
-  height: 200%;
-  filter: drop-shadow(5px 15px 0 var(--pink-5))
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 20px);
+	width: auto;
+	height: 200%;
+	filter: drop-shadow(5px 15px 0 var(--pink-6));
 }
 
 .image span {
-  font-size: 2.0rem;
-  font-family: monospace;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bolder;
+	font-size: 2rem;
+	font-family: monospace;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bolder;
 }
 
 .main fieldset {
-  display: grid;
-  grid-auto-flow: row;
-  justify-items: start;
-  gap: 0rem;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
-  border: 5px solid var(--pink-6);
-  animation: slideIn 1s;
+	display: grid;
+	grid-auto-flow: row;
+	justify-items: start;
+	gap: 0rem;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+	border: 5px solid var(--pink-6);
+	animation: slideIn 1s;
 }
 
 .main label {
-  font-family: 'Pacifico', cursive;
-  font-size: 0.5rem;
-  text-transform: uppercase;
-  color: var(--pink-6);
-  font-weight: bolder;
-  background: white;
-  padding: 0.5rem 0.5rem;
-  width: 100%;
-  border-bottom: 1px solid var(--pink-6)
+	font-family: 'Pacifico', cursive;
+	font-size: 0.5rem;
+	text-transform: uppercase;
+	color: var(--pink-6);
+	font-weight: bolder;
+	background: white;
+	padding: 0.5rem 0.5rem;
+	width: 100%;
+	border-bottom: 1px solid var(--pink-6);
 }
 
 .main input {
-  width: 100%;
-  border: 0;
-  padding: 1rem 1rem;
-  border-radius: 2px;
-  font-size: 1rem;
-  margin: 0;
+	width: 100%;
+	border: 0;
+	padding: 1rem 1rem;
+	border-radius: 2px;
+	font-size: 1rem;
+	margin: 0;
 }
 
 .main button {
-  z-index: 100;
-  width: 100%;
-  font: inherit;
-  font-size: 1.5rem;
-  background: var(--teal-6);
-  border: 0;
-  color: var(--gray-1);
-  padding: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-  border-radius: 100vmax;
-  animation: slideIn 1s;
-  transition: background 0.5s ease-in-out;
+	z-index: 100;
+	width: 100%;
+	font: inherit;
+	font-size: 1.5rem;
+	background: var(--teal-6);
+	border: 0;
+	color: var(--gray-1);
+	padding: 1rem;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: bolder;
+	border-radius: 100vmax;
+	animation: slideIn 1s;
+	transition: background 0.5s ease-in-out;
 }
 
 .main button:disabled {
-  background: var(--gray-5);
+	background: var(--gray-5);
 }
 
 .main p {
-  z-index: 100;
-  width: 100%;
-  text-align: center;
-  background: var(--pink-6);
-  border: 0;
-  color: var(--gray-0);
-  padding: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 1.5rem;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+	background: var(--pink-6);
+	border: 0;
+	color: var(--gray-0);
+	padding: 1rem;
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 1.5rem;
 }
