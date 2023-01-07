@@ -10,6 +10,8 @@
 }
 
 .main {
+  max-width: 800px;
+  margin-inline: auto;
 	height: 100svh;
 	display: grid;
 	grid-template-rows: auto minmax(0, 1fr);
@@ -34,7 +36,7 @@
 	grid-template-rows: minmax(0, 1fr) auto auto;
 	gap: 1rem;
 	padding: 1rem;
-	border: 5px solid var(--pink-6);
+	border: 10px solid var(--pink-6);
 }
 
 .image {
