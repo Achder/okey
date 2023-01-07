@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import keyImg from '../public/key.png'
+import keyImg from '../public/key.webp'
 import { GetServerSideProps, NextPage } from 'next'
 import { Toaster, toast } from 'react-hot-toast'
 
