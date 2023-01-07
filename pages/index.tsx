@@ -70,6 +70,10 @@ const Home: NextPage<Props> = (props) => {
 					name='viewport'
 					content='width=device-width, initial-scale=1, '
 				/>
+				<meta
+					name='description'
+					content='Track key possession'
+				/>
 				<link
 					rel='icon'
 					href='/favicon.ico'
