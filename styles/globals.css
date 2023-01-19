@@ -11,8 +11,6 @@ h1 {
 }
 
 html {
-	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
-	background: var(--cyan-2);
-	color: var(--gray-7);
+	color: black;
 }

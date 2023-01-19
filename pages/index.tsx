@@ -30,7 +30,6 @@ const Home: NextPage<Props> = (props) => {
 	const { keyNumber } = props
 	const [who, setWho] = React.useState('')
 	const [loading, setLoading] = React.useState(false)
-	const [success, setSuccess] = React.useState(false)
 
 	React.useEffect(() => {
 		setWho(localStorage.getItem('who') ?? '')
@@ -51,7 +50,6 @@ const Home: NextPage<Props> = (props) => {
 			await toast.promise(promise, {
 				loading: 'Updating...',
 				success: () => {
-					setSuccess(true)
 					localStorage.setItem('who', who)
 					return 'Updated key value'
 				},
@@ -65,7 +63,7 @@ const Home: NextPage<Props> = (props) => {
 	return (
 		<>
 			<Head>
-				<title>oka key tracker</title>
+				<title>okey</title>
 				<meta
 					name='viewport'
 					content='width=device-width, initial-scale=1, '
@@ -83,40 +81,35 @@ const Home: NextPage<Props> = (props) => {
 			<main className={styles.main}>
 				<Toaster position='top-center' />
 
-				<h1>key trade</h1>
-
 				<div className={styles.container}>
-					<div className={styles.image}>
-						<Image
-							src={keyImg}
-							alt='Picture of the key'
-							priority
-						/>
-						<span>{keyNumber}</span>
-					</div>
+					<h1>okey</h1>
+					<label>
+						<i className='ri-shield-keyhole-fill'></i>
+					</label>
+					<input
+						type='text'
+						value={keyNumber}
+						readOnly
+					/>
 
-					<fieldset style={{ opacity: success ? 0 : 1 }}>
-						<label>Who are you?</label>
-						<input
-							type='text'
-							value={who}
-							onChange={(event) => setWho(event.target.value)}
-							placeholder='Your name'
-							disabled={loading || success}
-						/>
-					</fieldset>
+					<label>
+						<i className='ri-emotion-fill'></i>
+					</label>
+					<input
+						type='text'
+						value={who}
+						onChange={(event) => setWho(event.target.value)}
+						placeholder='who are you...?'
+					/>
 
-					{success ? (
-						<p>Updated!</p>
-					) : (
-						<button
-							type='button'
-							disabled={loading || success || who === '' || keyNumber === ''}
-							onClick={onSend}
-						>
-							Take it
-						</button>
-					)}
+					<button
+						type='button'
+						disabled={loading || who === '' || keyNumber === ''}
+						onClick={onSend}
+					>
+						<i className='ri-send-plane-2-fill'></i>
+						sssend
+					</button>
 				</div>
 			</main>
 		</>
