@@ -47,14 +47,23 @@ const Home: NextPage<Props> = (props) => {
 				}),
 			})
 
-			await toast.promise(promise, {
-				loading: 'Updating...',
-				success: () => {
-					localStorage.setItem('who', who)
-					return 'Updated key value'
+			await toast.promise(
+				promise,
+				{
+					loading: 'Updating...',
+					success: () => {
+						localStorage.setItem('who', who)
+						return 'Updated key value'
+					},
+					error: (error) => error,
 				},
-				error: (error) => error,
-			})
+				{
+					iconTheme: {
+						primary: 'black',
+						secondary: 'white',
+					},
+				}
+			)
 		} finally {
 			setLoading(false)
 		}
