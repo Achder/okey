@@ -3,23 +3,9 @@
 	display: grid;
 	place-content: center;
 
-	--bg-img-disabled: linear-gradient(
-		45deg,
-		black 25%,
-		white 25%,
-		white 50%,
-		black 50%,
-		black 75%,
-		white 75%,
-		white 100%
-	);
-	--bg-size-disabled: 8.49px 8.49px;
 	--padding: 0.5rem 1rem;
 	--border: 3px solid black;
 	--radius: 4px;
-
-	background-image: var(--bg-img-disabled);
-	background-size: var(--bg-size-disabled);
 }
 
 .container {

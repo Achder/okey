@@ -10,7 +10,27 @@ h1 {
 	box-sizing: inherit;
 }
 
+html,
+body {
+	overflow: hidden;
+}
+
 html {
 	font-family: 'Open Sans', sans-serif;
 	color: black;
+
+	--bg-img-disabled: linear-gradient(
+		45deg,
+		black 25%,
+		white 25%,
+		white 50%,
+		black 50%,
+		black 75%,
+		white 75%,
+		white 100%
+	);
+	--bg-size-disabled: 8.49px 8.49px;
+
+	background-image: var(--bg-img-disabled);
+	background-size: var(--bg-size-disabled);
 }
