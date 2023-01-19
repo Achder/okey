@@ -12,8 +12,8 @@
 	width: 40ch;
 	max-width: 90vw;
 	display: grid;
-	grid-template-columns: 5ch minmax(0, 1fr);
-	gap: 0.5rem 0.3rem;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 0.5rem 1rem;
 
 	background: white;
 	padding: 2rem 1rem;
