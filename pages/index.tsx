@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import keyImg from '../public/key.webp'
 import { GetServerSideProps, NextPage } from 'next'
 import { Toaster, toast } from 'react-hot-toast'
 
@@ -22,20 +20,22 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	}
 }
 
-const Form = () => {
-	return
-}
-
 const Home: NextPage<Props> = (props) => {
 	const { keyNumber } = props
 	const [who, setWho] = React.useState('')
 	const [loading, setLoading] = React.useState(false)
 
 	React.useEffect(() => {
-		setWho(localStorage.getItem('who') ?? '')
+		const storageWho = localStorage.getItem('who') ?? ''
+		setWho(storageWho)
+
+		if (keyNumber !== '' && storageWho !== '') {
+			toast(`All clear, ${storageWho}! Automatically updating!`)
+			onSend(storageWho, keyNumber)
+		}
 	}, [])
 
-	const onSend = async () => {
+	const onSend = async (who: string, keyNumber: string) => {
 		try {
 			setLoading(true)
 
@@ -53,14 +53,13 @@ const Home: NextPage<Props> = (props) => {
 					loading: 'Updating...',
 					success: () => {
 						localStorage.setItem('who', who)
-						return 'Updated key value'
+						return `Update successful! Sääanks, ${who}!`
 					},
 					error: (error) => error,
 				},
 				{
-					iconTheme: {
-						primary: 'black',
-						secondary: 'white',
+					success: {
+						duration: 10000,
 					},
 				}
 			)
@@ -88,7 +87,16 @@ const Home: NextPage<Props> = (props) => {
 			</Head>
 
 			<main className={styles.main}>
-				<Toaster position='top-center' />
+				<Toaster
+					position='top-center'
+					reverseOrder
+					toastOptions={{
+						iconTheme: {
+							primary: 'black',
+							secondary: 'white',
+						},
+					}}
+				/>
 
 				<div className={styles.container}>
 					<h1>okey</h1>
@@ -114,7 +122,7 @@ const Home: NextPage<Props> = (props) => {
 					<button
 						type='button'
 						disabled={loading || who === '' || keyNumber === ''}
-						onClick={onSend}
+						onClick={() => onSend(who, keyNumber)}
 					>
 						<i className='ri-send-plane-2-fill'></i>
 						sssend
