@@ -30,7 +30,6 @@ const Home: NextPage<Props> = (props) => {
 		setWho(storageWho)
 
 		if (keyNumber !== '' && storageWho !== '') {
-			toast(`All clear, ${storageWho}! Automatically updating!`)
 			onSend(storageWho, keyNumber)
 		}
 	}, [])
