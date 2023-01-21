@@ -12,7 +12,7 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 	const props: Props = {
-		keyNumber: (context.query?.keyNumber as string | undefined) ?? '',
+		keyNumber: (context.query?.k as string | undefined) ?? '',
 	}
 
 	return {
